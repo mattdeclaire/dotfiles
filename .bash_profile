@@ -17,3 +17,7 @@ function git_branch {
 }
 
 export PS1="\t|\w${GREEN}\$(git_branch)${COLOR_NONE}\$ "
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
