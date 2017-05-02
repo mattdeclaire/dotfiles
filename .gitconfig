@@ -7,15 +7,11 @@
 [alias]
 	oneline = log --format='%Cgreen%h %C(cyan)%cd%Creset | %s%Cred%d %Cblue(%an)' --date=short
 	s = status -sb
-	staged = diff --staged
 	amend = commit --amend -C HEAD
-	uncommit = reset --soft HEAD~
-	graph = ! git oneline --graph
 	resolve = ! git ls-files --unmerged | cut -f2 | sort -u | xargs subl
 	edit = ! git ls-files -m -o --exclude-standard | xargs subl
 	timehop = ! git log --since=1.year.1.day --until=1.year --author=$(git config user.email)
 	bump = ! git commit --allow-empty -m "bump"
-	staging-authors = ! git fetch && git log --format='%an' origin/live..origin/staging | sort -u
 [push]
 	default = simple
 [color]
