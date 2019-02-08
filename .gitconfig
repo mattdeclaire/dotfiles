@@ -12,8 +12,6 @@
 	edit = ! git ls-files -m -o --exclude-standard | xargs subl
 	timehop = ! git log --since=1.year.1.day --until=1.year --author=$(git config user.email)
 	bump = ! git commit --allow-empty -m "bump"
-[push]
-	default = simple
 [color]
 	ui = true
 [color "diff"]
